@@ -9,6 +9,7 @@
     $pass = "";
     $db = "sistema_simples";
     
+    // Cria a conexão com o MySQL
     $conn = new mysqli($host,$user,$pass,$db);
 
     // Teste de conexão com banco de dados
@@ -17,4 +18,5 @@
     // }else{
     //     echo ("<p> BD: ok </p>");
     // }
+    
 ?>

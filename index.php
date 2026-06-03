@@ -2,17 +2,21 @@
 
 include("infra/db/connect.php");
 
+// Verifica se formulário login foi enviado
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
+    // Recebe os dados informados pelo usuário
     $usuario = $_POST["usuario"];
     $senha = $_POST["senha"];
 
-    $sql = "SELECT * FROM users 
-    WHERE username = '$usuario' 
-    AND password = '$senha'";
+    // Verificaa se o usuário existe no banco
+    $sql = "SELECT * FROM usuario 
+    WHERE usuario = '$usuario' 
+    AND senha = '$senha'";
 
     $resultado = $conn -> query($sql);
 
+    // Se o usuário for encontrado, cria a sessão e redireciona
     if($resultado -> num_rows > 0){
         $_SESSION["usuario"] = $usuario;
         header("Location: public/home.php");
