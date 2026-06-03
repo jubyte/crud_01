@@ -12,18 +12,20 @@
 
     <?php
     
-
-    $sqlUsuarios = "SELECT * FROM users";
+     // Consulta todos os usuários cadastrados
+    $sqlUsuarios = "SELECT * FROM usuario";
 
     $resultadoUsuarios = $conn -> query($sqlUsuarios);
 
+    // Passa por todos os registros encontrados
     while($linha = $resultadoUsuarios->fetch_assoc()){
+
         echo "<tr>
         
             <td>" . $linha["id"] . "</td>
-            <td>" . $linha["username"] . "</td>
-            <td>" . $linha["password"] . "</td>
-        
+            <td>" . $linha["usuario"] . "</td>
+            <td>" . $linha["senha"] . "</td>
+
         </tr>";
     }
     
