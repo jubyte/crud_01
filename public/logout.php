@@ -1,6 +1,13 @@
 <?php
-    session_start();
-    session_destroy();
-    header("Location: ../index.php");
-    exit();
+
+   // Inicia sessão atual
+   session_start();
+
+   // Remove todos os dados da sessão
+   session_destroy();
+
+   // Retorna para tela de login
+   header("Location: ../index.php");
+   exit();
+
 ?>
