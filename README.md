@@ -31,9 +31,6 @@ CRUD_01/
 │
 ├── index.php
 └── README.md
-
-Funcionamento do código
-Aprendizados obtidos 
 ```
 
 ## Funcionamento do Código
