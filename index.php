@@ -37,9 +37,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 
 <body>
-     <?php
-    include("../public/component/table.php");
-    ?>
     <h2>Login com PHP</h2><form method="POST">
         <label for="usuario">Usuario:</label>
         <input type="text" name="usuario">

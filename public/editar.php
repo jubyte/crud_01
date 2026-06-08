@@ -20,9 +20,10 @@
         $novaSenha = $_POST["senha"];
 
         $sqlUpdate = "UPDATE usuario SET 
-                        usuario = '$novoUsuario', 
-                        password = '$novaSenha' 
-                        WHERE id ='$id'";
+                usuario = '$novoUsuario', 
+                senha = '$novaSenha' 
+                WHERE id ='$id'";
+
         if($conn -> query($sqlUpdate) === TRUE){
             header("Location: home.php");
             exit();
@@ -48,11 +49,11 @@
 
     <form method="POST">
         <label for="usuario">Usuario:</label>
-        <input type="text" name="usuario" value=" <?php echo $usuario['username'] ?> ">
+        <input type="text" name="usuario" value="<?php echo $usuario['usuario']; ?>">
         <br>
         <br>
         <label for="senha">Senha:</label>
-        <input type="password" name="senha" value=" <?php echo $usuario['password'] ?> ">
+        <input type="password" name="senha" value="<?php echo $usuario['senha']; ?>">
         <br>
         <br>
         <button type="submit">Salvar</button>
