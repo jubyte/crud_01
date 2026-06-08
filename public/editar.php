@@ -8,7 +8,7 @@
 
     $id = $_GET["id"];
 
-    $sql = "SELECT * FROM users WHERE id = $id";
+    $sql = "SELECT * FROM usuario WHERE id = $id";
     $resultado = $conn -> query($sql);
 
     $usuario = $resultado -> fetch_assoc();
@@ -18,8 +18,8 @@
         $novoUsuario = $_POST["usuario"];
         $novaSenha = $_POST["senha"];
 
-        $sqlUpdate = "UPDATE users SET 
-                        username = '$novoUsuario', 
+        $sqlUpdate = "UPDATE usuario SET 
+                        usuario = '$novoUsuario', 
                         password = '$novaSenha' 
                         WHERE id ='$id'";
         if($conn -> query($sqlUpdate) === TRUE){
