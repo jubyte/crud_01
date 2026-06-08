@@ -52,3 +52,57 @@ Foram reforçados os seguintes conceitos:
 - Manipulação de dados utilizando comandos SQL.
 - Organização de arquivos em componentes reutilizáveis.
 - Uso do Git para versionamento e documentação do projeto.
+
+# Atualização - ETAPA 2
+
+## Edição e Exclusão de Usuários
+As funcionalidades de edição e exclusão foram adicionadas para permitir o gerenciamento dos usuários cadastrados no sistema.
+
+## Alterações
+Os seguintes arquivos foram modificados:
+
+- **table.php**: adição dos botões de editar e excluir.
+- **editar.php**: responsável pela alteração dos dados do usuário.
+- **excluir.php**: responsável pela remoção dos registros.
+
+## Trechos
+
+### Editar Usuário
+
+```php
+$sqlUpdate = "UPDATE usuario SET
+              usuario = '$novoUsuario',
+              senha = '$novaSenha'
+              WHERE id = '$id'";
+```
+
+Atualiza os dados do usuário selecionado.
+
+### Excluir Usuário
+
+```php
+$sql = "DELETE FROM usuario WHERE id = $id";
+```
+
+Remove o usuário do banco de dados.
+
+## Dificuldades
+No início, tive dificuldade para entender como os arquivos se comunicavam e como o ID do usuário era enviado entre as páginas. Como ainda possuía pouco conhecimento sobre PHP e banco de dados, não implementei a funcionalidade imediatamente.
+Após a explicação do professor e algumas pesquisas, consegui compreender melhor o funcionamento do `$_GET`, das consultas SQL e dos redirecionamentos entre páginas.
+
+## Pesquisas e Testes
+Foram realizadas pesquisas sobre:
+
+- Comandos SQL `UPDATE` e `DELETE`.
+- Utilização do `$_GET`.
+- Redirecionamento com `header()`.
+
+Também foram realizados testes para:
+
+- Login de usuários.
+- Cadastro de novos registros.
+- Exibição da tabela.
+- Edição de usuários.
+- Exclusão de usuários.
+
+Os testes confirmaram o funcionamento correto das funcionalidades implementadas.
