@@ -16,6 +16,7 @@
     $sqlUsuarios = "SELECT * FROM usuario";
 
     $resultadoUsuarios = $conn -> query($sqlUsuarios);
+    // echo $resultadoUsuarios->num_rows;
 
     // Passa por todos os registros encontrados
     while($linha = $resultadoUsuarios->fetch_assoc()){

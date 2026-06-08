@@ -7,6 +7,7 @@
     }
 
     $id = $_GET["id"];
+    // echo $id;
 
     $sql = "SELECT * FROM usuario WHERE id = $id";
     $resultado = $conn -> query($sql);
